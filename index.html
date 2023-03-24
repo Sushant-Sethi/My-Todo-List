@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My-Todo-List</title>
+    <link rel="icon" type="image/x-icon" href="./assets/image/favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+      
+    </style>
+  </head>
+  <body>
+    <header>
+      <!--<div class="keep-logo"><span>ToDo</span></div>-->
+      <div>
+        <a
+          ><img class="logo" src="./assets/image/logo.png" alt="To Do List" />
+        </a>
+      </div>
+      <div class="keep-search">
+        <svg focusable="false" height="24px" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg"><path d="M20.49,19l-5.73-5.73C15.53,12.2,16,10.91,16,9.5C16,5.91,13.09,3,9.5,3S3,5.91,3,9.5C3,13.09,5.91,16,9.5,16 c1.41,0,2.7-0.47,3.77-1.24L19,20.49L20.49,19z M5,9.5C5,7.01,7.01,5,9.5,5S14,7.01,14,9.5S11.99,14,9.5,14S5,11.99,5,9.5z"></path><path d="M0,0h24v24H0V0z" fill="none"></path></svg>
+
+        <input
+          type="text"
+          class="main-search"
+          placeholder="Search...."
+          size="50"
+        />
+      </div>
+      <nav class="keep-list">
+        <ul class="keep-list-item">
+          <li>
+            <span class="material-symbols-outlined icon-img refresh"> refresh </span>
+          </li>
+          <li>
+            <span class="material-symbols-outlined icon-img"> list </span>
+          </li>
+          <li>
+            <span class="material-symbols-outlined icon-img setting-icn"> settings </span>
+          </li>
+          <li>
+            <span class="material-symbols-outlined icon-img dot"> apps </span>
+          </li>
+          <li>
+            <span class="material-symbols-outlined icon-img">
+              account_circle
+            </span>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container main-body-content">
+      <div class="row">
+        <div class="col-sm-3">
+          
+          <div class="left-body-container">
+            <ul class="left-panel-ul">
+            <li class="left-panel-li"><a class="left-panel">
+              <div> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6A4.997 4.997 0 0 1 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"></path></svg></div>
+              <div><span> Notes </span></div>
+              </a>
+            </li>
+            <li><a class="left-panel">
+              <div> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M18 17v-6c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v6H4v2h16v-2h-2zm-2 0H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6zm-4 5c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2z"></path></svg></div>
+              <div><span> Reminder </span></div>
+              </a>
+            </li>
+  
+            <li><a class="left-panel">
+              <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.41 4.94l-1.35-1.35c-.78-.78-2.05-.78-2.83 0L13.4 6.41 3 16.82V21h4.18l10.46-10.46 2.77-2.77c.79-.78.79-2.05 0-2.83zm-14 14.12L5 19v-1.36l9.82-9.82 1.41 1.41-9.82 9.83z"></path></svg></div>
+              <div><span> Edit labels </span></div>
+              </a>
+            </li>
+  
+            <li><a class="left-panel">
+              <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.54 5.23l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6.02 3 6.5V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.48-.17-.93-.46-1.27zM6.24 5h11.52l.83 1H5.42l.82-1zM5 19V8h14v11H5zm11-5.5l-4 4-4-4 1.41-1.41L11 13.67V10h2v3.67l1.59-1.59L16 13.5z"></path></svg></div>
+              <div><span> Archive </span></div>
+              </a>
+            </li>
+  
+            <li><a class="left-panel">
+              <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M15 4V3H9v1H4v2h1v13c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V6h1V4h-5zm2 15H7V6h10v13z"></path><path d="M9 8h2v9H9zm4 0h2v9h-2z"></path></svg></div>
+              <div><span> Trash </span></div>
+              </a>
+            </li>
+            <p class="licence-para">Open-source licenses</p>
+            </ul>
+            
+          </div>
+        </div>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-7">
+          <div class="todo-conatiner">
+            <input
+              id="new-todo-title"
+              type="text"
+              placeholder="Take a note..."
+              size="40"
+            />
+   <button class="right-col" onclick="onAddTodo()">
+               
+    <span class="material-symbols-outlined send">
+      send
+      </span>
+      
+  </button> 
+  <span class="material-symbols-outlined edit">
+    edit
+    </span> 
+    <span class="material-symbols-outlined trash">
+      delete
+      </span>
+      <span class="material-symbols-outlined attachment">
+        attach_file
+        </span>
+    <span class="material-symbols-outlined landscape">
+      image
+      </span>
+     
+  
+ 
+        </div>
+        <section>
+          <div class="mytodo" id="todo-list"></div>
+        </section>       
+      </div>
+    </div>
+ 
+  </body>
+</html>
+<script>
+  const todoListContainer = document.getElementById("todo-list");
+  const newTodoTitleElem = document.getElementById("new-todo-title");
+
+  function onAddTodo() {
+    const newTodoTitleText = newTodoTitleElem.value;
+    if (newTodoTitleText === "") {
+      alert("Please enter a valid data");
+      return;
+    }
+
+    console.log("@AJ Value: ", newTodoTitleText);
+
+    const paraElem = document.createElement("p");
+    paraElem.textContent = newTodoTitleText;
+    todoListContainer.prepend(paraElem);
+    newTodoTitleElem.value = "";
+  }
+
+  //console.log(todoListContainer, newTodoTitleElem);
+</script>
